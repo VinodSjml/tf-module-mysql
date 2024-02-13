@@ -1,5 +1,5 @@
 resource "aws_db_instance" "mysql" {
-  allocated_storage    = 1
+  allocated_storage    = 10
   identifier          = "roboshop-${var.ENV}-mysql"
   engine               = "mysql"
   engine_version       = "5.7"
