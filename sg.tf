@@ -1,7 +1,7 @@
 # Creates Security Group For Document DB
 resource "aws_security_group" "allows_mysql" {
   name                  = "roboshop-${var.ENV}-mysql-securitygroup"
-  description           = "roboshop-${var.ENV}-mysql-securitygroup"
+  description           = "allows private traffic"
   vpc_id                = data.terraform_remote_state.vpc.outputs.VPC_ID
 
   ingress {
