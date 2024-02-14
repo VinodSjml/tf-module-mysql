@@ -1,6 +1,6 @@
 resource "null_resource" "schema" {
   
-depends_on = [aws_db_instance.mysql]
+  depends_on = [aws_db_instance.mysql]
   provisioner "local-exec" {
     command = <<EOF
         cd /tmp
@@ -10,4 +10,5 @@ depends_on = [aws_db_instance.mysql]
         mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql
     EOF
   }
+
 }
